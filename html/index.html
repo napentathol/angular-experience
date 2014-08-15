@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="description" content="Alex Webster's angular experience as of august 2014">
+    <meta name="author" content="Alex Webster, ac.webster1990@gmail.com">
+    <meta name="keywords" content="Java,HTML,Javascript,Groovy,XML,Developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="xpApp">
+    <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="#/intro">Intro</a></li>
+            <li><a href="#/java">Java</a></li>
+            <li><a href="#/angular">Angular</a></li>
+        </ul>
+    </nav>
+    <div class="container" ng-controller="ParentController">
+        <div class="row">
+            <div class="view {{class}}" ng-view></div>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-default" ng-click="prev()">Prev</button>
+            <button class="btn btn-default" ng-click="next()">Next</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/controllers.js"></script>
+</body>
+</html>

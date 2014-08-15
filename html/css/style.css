@@ -1,0 +1,84 @@
+.ng-enter { z-index: 8888; }
+.ng-leave { z-index: 9999; height: 0; }
+
+/* entrance animation. */
+.right.ng-enter {
+    -webkit-animation:slideInRight 0.4s both ease-in;
+    -moz-animation:slideInRight 0.4s both ease-in;
+    animation:slideInRight 0.4s both ease-in;
+}
+
+.left.ng-enter {
+    -webkit-animation:slideInLeft 0.4s both ease-in;
+    -moz-animation:slideInLeft 0.4s both ease-in;
+    animation:slideInLeft 0.4s both ease-in;
+ }
+
+/* exit animation */
+.right.ng-leave {
+    -webkit-animation:slideOutLeft 0.2s both ease-in;
+    -moz-animation:slideOutLeft 0.2s both ease-in;
+    animation:slideOutLeft 0.2s both ease-in;
+}
+
+/* exit animation */
+.left.ng-leave {
+    -webkit-animation:slideOutRight 0.2s both ease-in;
+    -moz-animation:slideOutRight 0.2s both ease-in;
+    animation:slideOutRight 0.2s both ease-in;
+}
+/* slide in from the left */
+@keyframes slideInLeft {
+    0%    { transform: translateX(-200%); }
+    50%   { transform: translateX(-200%);}
+    100%  { transform: translateX(0); }
+}
+@-moz-keyframes slideInLeft {
+    0%    { -moz-transform: translateX(-200%); }
+    50%   { -moz-transform: translateX(-200%); }
+    100%  { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInLeft {
+    0%    { -webkit-transform: translateX(-200%); }
+    50%   { -webkit-transform: translateX(-200%); }
+    100%  { -webkit-transform: translateX(0); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    0%    { transform: translateX(200%); }
+    50%   { transform: translateX(200%); }
+    100%  { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    0%    { -moz-transform: translateX(200%); }
+    50%   { -moz-transform: translateX(200%); }
+    100%  { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+    0%    { -webkit-transform: translateX(200%); }
+    50%   { -webkit-transform: translateX(200%); }
+    100%  { -webkit-transform: translateX(0); }
+}
+
+/* slide out to the left */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {
+    to      { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+    to      { -webkit-transform: translateX(-100%); }
+}
+
+/* slide out to the right */
+@keyframes slideOutRight {
+    to      { transform: translateX(100%); }
+}
+@-moz-keyframes slideOutRight {
+    to      { -moz-transform: translateX(100%); }
+}
+@-webkit-keyframes slideOutRight {
+    to      { -webkit-transform: translateX(100%); }
+}
